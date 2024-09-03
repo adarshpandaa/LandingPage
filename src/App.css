@@ -1,0 +1,154 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.full-width {
+    width: 100%;
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #0303c7;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #e68a00;
+}
+
+/* Responsive Media Queries */
+
+/* Large screens */
+@media (min-width: 1120px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Medium screens (tablets, small desktops) */
+@media (max-width: 1120px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 5rem;
+    }
+
+    .hero-content p {
+        font-size: 2.5rem;
+    }
+}
+
+/* Small screens (mobile devices) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 10px auto;
+        width: 80%;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    #testimonials .testimonial {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 0.875rem;
+    }
+
+    .cta-button {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+}
