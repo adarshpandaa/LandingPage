@@ -12,6 +12,7 @@ const Testimonials = () => {
     }, []);
 
     return (
+        <div className='full-width-section'> 
         <div className='container'>
             <section id="testimonials" ref={testimonialsRef}>
             <h2>What Our Customers Say</h2>
@@ -30,6 +31,7 @@ const Testimonials = () => {
                 </div>
             </div>
         </section>
+        </div>
         </div>
         
     );

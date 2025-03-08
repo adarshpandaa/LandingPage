@@ -10,13 +10,15 @@ const About = () => {
     }, []);
 
     return (
-        <div className='container'>
+        <div className='full-width-section'>
+            <div className='container'>
             <section id="about" ref={aboutRef}>
         <div className="about-content">
             <h2>About Us</h2>
-            <p>MyBrand is a leader in tech innovation, bringing the best products to consumers worldwide. Our mission is to drive progress and empower individuals through cutting-edge technology.</p>
+            <p>Intelion, an IT company that will operate as a SaaS provider and IT solutions provider. Our mission is to drive progress and empower individuals through cutting-edge technology.</p>
         </div>
     </section>
+        </div>
         </div>
         
     );

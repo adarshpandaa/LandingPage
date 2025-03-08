@@ -7,21 +7,21 @@ import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import Modal from './components/Modal';
-import './App.css'
+import './App.css';
 
 function App() {
-    return (
-        <div className="App">
-            <Navbar />
-            <Hero />
-            <Features />
-            <About />
-            <Testimonials />
-            <CTA />
-            <Footer />
-            <Modal />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Navbar />
+      <Hero />
+      <Features />
+      <About />
+      <Testimonials />
+      <CTA />
+      <Footer />
+      <Modal />
+    </div>
+  );
 }
 
 export default App;

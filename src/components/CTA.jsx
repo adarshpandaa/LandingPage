@@ -6,13 +6,15 @@ const CTA = () => {
     };
 
     return (
-        <div className='container'>
+        <div className='full-width-section'>
+            <div className='container'>
             <section id="cta">
             <div className="cta-content">
                 <h2>Ready to Elevate Your Experience?</h2>
-                <button onClick={handleModalOpen} className="cta-button">Get Started</button>
+                <button onClick={handleModalOpen} className="cta-button">Contact Us</button>
             </div>
         </section>
+        </div>
         </div>
         
     );

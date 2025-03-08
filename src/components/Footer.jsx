@@ -3,10 +3,12 @@ import './css/Footer.css';
 
 const Footer = () => {
     return (
+        <div className='full-width-section'> 
         <div className='container'>
             <footer>
-            <p>&copy; 2024 MyBrand. All Rights Reserved.</p>
+            <p>&copy; 2025 Intelion. All Rights Reserved.</p>
         </footer>
+        </div>
         </div>
         
     );

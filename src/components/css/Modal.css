@@ -1,75 +1,102 @@
 /* Modal Styles */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 400px;
-    width: 100%;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    position: relative;
+  background-color: white; /* White background for the 3D box */
+  padding: 30px; /* Padding from all sides */
+  border-radius: 10px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  position: relative;
+  transform: perspective(1000px) rotateX(10deg) rotateY(10deg); /* 3D effect */
+  transform-style: preserve-3d; /* Ensure child elements respect 3D transformations */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Add depth to the modal */
+.modal-content::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border-radius: 10px;
+  transform: translateZ(-20px); /* Push the shadow back */
+  z-index: -1;
+}
+
+/* Hover effect for more interactivity */
+.modal-content:hover {
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(20px); /* Lift the box */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
 }
 
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #aaa;
-    cursor: pointer;
-    transition: color 0.3s;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: #000; /* Black color for the close button */
+  cursor: pointer;
+  transition: color 0.3s;
 }
 
 .close-button:hover {
-    color: #000;
+  color: #ff0000; /* Red color on hover */
 }
 
 .modal h2 {
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000; /* Black color for the heading */
 }
 
 .modal form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .modal label {
-    margin-bottom: 5px;
-    font-weight: bold;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000; /* Black color for labels */
 }
 
 .modal input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd; /* Light gray border for inputs */
+  border-radius: 5px;
+  background-color: #fff; /* White background for inputs */
+  color: #000; /* Black text for inputs */
 }
 
 .cta-button {
-    background-color: #ff9900;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  background-color: #0303c7; /* Blue background for the button */
+  color: #fff; /* White text for the button */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #e68a00;
+  background-color: #0202a3; /* Darker blue on hover */
 }

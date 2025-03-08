@@ -16,11 +16,12 @@ const Modal = () => {
     }, []);
 
     return (
+        <div className='full-width-section'> 
         <div className='container'>
              <div id="cta-modal" className="modal">
             <div className="modal-content">
                 <span className="close-button" onClick={handleClose}>&times;</span>
-                <h2>Join MyBrand Today!</h2>
+                <h2>Join Intelion Today!</h2>
                 <form id="signup-form">
                     <label htmlFor="name">Name</label>
                     <input type="text" id="name" name="name" required />
@@ -34,6 +35,7 @@ const Modal = () => {
                     <button type="submit" className="cta-button">Sign Up</button>
                 </form>
             </div>
+        </div>
         </div>
         </div>
        

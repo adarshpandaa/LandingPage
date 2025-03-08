@@ -1,32 +1,42 @@
 /* CTA Section Styles */
 #cta {
     padding: 50px 20px;
-    background-color: #4d65ff;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--text);
     text-align: center;
-}
-
-.cta-content {
+  }
+  
+  .cta-content {
     max-width: 600px;
     margin: 0 auto;
-}
-
-#cta h2 {
+  }
+  
+  #cta h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-}
-
-.cta-button {
-    background-color: #fff;
-    color: #0030dc;
+  }
+  
+  .cta-button {
+    background-color: var(--secondary);
+    color: var(--text);
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #e68a00;
-    color: #fff;
-}
+  }
+  
+  .cta-button:hover {
+    background-color: var(--primary);
+  }
+  
+  @media (max-width: 768px) {
+    #cta h2 {
+      font-size: 1.5rem;
+    }
+  
+    .cta-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }

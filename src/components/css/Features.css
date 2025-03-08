@@ -1,26 +1,42 @@
 #features {
-    text-align: center;
-    padding: 50px 20px;
+  text-align: center;
+  padding: 100px 20px; /* Add more padding to account for the fixed navbar */
+  background-color: var(--bg);
 }
 
 .feature-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
-    flex: 1;
-    min-width: 250px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border:0.5px solid black;
-    border-radius: 15px;
-    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s;
+  flex: 1;
+  min-width: 250px;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  transform: perspective(1000px) rotateY(5deg) rotateX(5deg); /* Default 3D effect */
 }
 
 .card:hover {
-    transform: translateY(-10px);
+  transform: perspective(1000px) rotateY(10deg) rotateX(10deg) translateY(-10px); /* Enhanced 3D effect on hover */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .card {
+    min-width: 100%;
+    margin: 10px 0;
+    transform: none; /* Remove 3D effect on smaller screens for better usability */
+  }
+
+  .card:hover {
+    transform: none; /* Remove hover effect on smaller screens */
+  }
 }

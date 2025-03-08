@@ -10,16 +10,17 @@ const Hero = () => {
     }, []);
 
     return (
+        <div className='full-width-section'> 
         <div className='container'>
             <section id="hero" ref={heroRef}>
             <div className="hero-content">
-                <h1>Discover the Future with MyBrand</h1>
+                <h1>Discover the Future with Intelion</h1>
                 <p>Leading innovations at your fingertips.</p>
                 <button id="hero-button" className="cta-button">Join Now</button>
             </div>
         </section>
         </div>
-        
+        </div>
     );
 };
 
